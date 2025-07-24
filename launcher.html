@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shotgun-Pack v1 Launcher</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #23272a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #launcher {
+      background: #2c2f33;
+      padding: 40px 60px;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+    button {
+      margin-top: 24px;
+      padding: 14px 32px;
+      font-size: 1.1em;
+      background: #7289da;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:active, button:focus {
+      background: #99aab5;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="launcher">
+    <h2 id="statusText">Click here to apply Shotgun-Pack v1</h2>
+    <button id="applyBtn" onclick="applyPack()">Apply</button>
+  </div>
+  <script>
+    function applyPack() {
+      document.getElementById('statusText').innerText = "Changes have been applied. Please close this tab.";
+      document.getElementById('applyBtn').style.display = "none";
+      // If you want to trigger something else, call it here.
+      // Example: window.location.href = '/some-action';
+    }
+  </script>
+</body>
+</html>
